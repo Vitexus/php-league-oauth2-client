@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+PKG_VERSION := $(shell dpkg-parsechangelog -S Version | sed 's/~.*//')
+PKG_SOURCE  := $(shell jq -r '.name' composer.json)
+PKG_TYPE    := $(shell jq -r '.type' composer.json)
+
+INSTALL_PATH := debian/php-league-oauth2-client/usr/share/php/League/OAuth2/Client
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	install -m 644 debian/autoload.php $(INSTALL_PATH)/autoload.php
+	sed -i "s|'unknown'|'$(PKG_SOURCE)'|" $(INSTALL_PATH)/autoload.php
+	sed -i "s|'0.0.0'|'$(PKG_VERSION)'|"  $(INSTALL_PATH)/autoload.php
+	sed -i "s|'library'|'$(PKG_TYPE)'|g"  $(INSTALL_PATH)/autoload.php
+	install -m0755 -d debian/php-league-oauth2-client/usr/share/pkg-php-tools/autoloaders
+	echo 'league oauth2-client League/OAuth2/Client/autoload.php' > \
+	    debian/php-league-oauth2-client/usr/share/pkg-php-tools/autoloaders/php-league-oauth2-client
+
+override_dh_auto_test:
+	appstreamcli validate --pedantic --no-net \
+	    debian/php-league-oauth2-client.metainfo.xml

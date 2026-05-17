@@ -1,0 +1,10 @@
+src/*.php                              usr/share/php/League/OAuth2/Client/
+src/Grant/*.php                        usr/share/php/League/OAuth2/Client/Grant/
+src/Grant/Exception/*.php              usr/share/php/League/OAuth2/Client/Grant/Exception/
+src/OptionProvider/*.php               usr/share/php/League/OAuth2/Client/OptionProvider/
+src/Provider/*.php                     usr/share/php/League/OAuth2/Client/Provider/
+src/Provider/Exception/*.php           usr/share/php/League/OAuth2/Client/Provider/Exception/
+src/Token/*.php                        usr/share/php/League/OAuth2/Client/Token/
+src/Tool/*.php                         usr/share/php/League/OAuth2/Client/Tool/
+composer.json                          usr/share/php/League/OAuth2/Client/
+debian/php-league-oauth2-client.metainfo.xml   usr/share/metainfo/
