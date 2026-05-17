@@ -1,0 +1,5 @@
+php-league-oauth2-client (2.9.0-1) UNRELEASED; urgency=low
+
+  * Initial Debian packaging of league/oauth2-client 2.9.0
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Sun, 17 May 2026 13:59:32 +0200

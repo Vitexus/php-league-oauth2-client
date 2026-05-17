@@ -1,0 +1,25 @@
+Source: php-league-oauth2-client
+Section: php
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+ jq,
+ appstream,
+Standards-Version: 4.7.0
+Homepage: https://github.com/thephpleague/oauth2-client
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/Vitexus/oauth2-client.git
+Vcs-Browser: https://github.com/Vitexus/oauth2-client
+
+Package: php-league-oauth2-client
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ composer,
+ php-guzzlehttp-guzzle,
+Description: OAuth 2.0 Client Library
+ Provides base classes for OAuth 2.0 authorization flows, supporting
+ both authorization code and client credentials grant types.
+ Debian packaging of the league/oauth2-client Composer package.
