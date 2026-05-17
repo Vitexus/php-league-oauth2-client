@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="generic">
+  <id>io.github.vitexus.php-league-oauth2-client</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>League OAuth2 Client</name>
+  <summary>OAuth 2.0 Client Library for PHP</summary>
+  <description>
+    <p>
+      Provides base classes for OAuth 2.0 authorization flows in PHP,
+      supporting authorization code, client credentials, resource owner
+      password, and refresh token grant types. Part of The League of
+      Extraordinary Packages.
+    </p>
+  </description>
+  <icon type="stock">package-x-generic</icon>
+  <url type="homepage">https://github.com/thephpleague/oauth2-client</url>
+  <url type="bugtracker">https://github.com/thephpleague/oauth2-client/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
