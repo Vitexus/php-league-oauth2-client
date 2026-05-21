@@ -1,4 +1,3 @@
-src/*.php                              usr/share/php/League/OAuth2/Client/
 src/Grant/*.php                        usr/share/php/League/OAuth2/Client/Grant/
 src/Grant/Exception/*.php              usr/share/php/League/OAuth2/Client/Grant/Exception/
 src/OptionProvider/*.php               usr/share/php/League/OAuth2/Client/OptionProvider/
