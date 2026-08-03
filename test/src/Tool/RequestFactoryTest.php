@@ -10,14 +10,14 @@ class RequestFactoryTest extends TestCase
 {
     public function testGetRequest()
     {
-        $method  = 'get';
+        $method  = 'GET';
         $uri     = '/test';
 
         $factory = new RequestFactory();
         $request = $factory->getRequest($method, $uri);
 
         $this->assertInstanceOf(RequestInterface::class, $request);
-        $this->assertSame(strtoupper($method), $request->getMethod());
+        $this->assertSame($method, $request->getMethod());
         $this->assertSame($uri, (string) $request->getUri());
 
         $headers         = ['X-Test' => 'Foo'];
@@ -33,14 +33,14 @@ class RequestFactoryTest extends TestCase
 
     public function testGetRequestWithOptions()
     {
-        $method  = 'head';
+        $method  = 'HEAD';
         $uri     = '/test/options';
 
         $factory = new RequestFactory();
         $request = $factory->getRequestWithOptions($method, $uri);
 
         $this->assertInstanceOf(RequestInterface::class, $request);
-        $this->assertSame(strtoupper($method), $request->getMethod());
+        $this->assertSame($method, $request->getMethod());
         $this->assertSame($uri, (string) $request->getUri());
 
         $options = [

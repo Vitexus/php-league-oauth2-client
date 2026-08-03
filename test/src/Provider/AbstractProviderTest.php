@@ -570,7 +570,7 @@ class AbstractProviderTest extends TestCase
         $provider = new MockProvider();
 
         $token = new AccessToken(['access_token' => 'abc', 'expires_in' => 3600]);
-        $request = $provider->getAuthenticatedRequest('get', 'https://api.example.com/v1/test', $token);
+        $request = $provider->getAuthenticatedRequest('GET', 'https://api.example.com/v1/test', $token);
 
         $stream = Mockery::mock(StreamInterface::class, [
             '__toString' => '{"example":"response"}',
